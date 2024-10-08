@@ -1,0 +1,434 @@
+\documentclass{article}
+
+\usepackage[french]{babel}
+\usepackage [utf8] {inputenc} % utf-8 / latin1 
+\usepackage{multicol}
+
+\setlength{\hoffset}{-18pt}
+\setlength{\oddsidemargin}{0pt} % Marge gauche sur pages impaires
+\setlength{\evensidemargin}{9pt} % Marge gauche sur pages paires
+\setlength{\marginparwidth}{54pt} % Largeur de note dans la marge
+\setlength{\textwidth}{481pt} % Largeur de la zone de texte (17cm)
+\setlength{\voffset}{-18pt} % Bon pour DOS
+\setlength{\marginparsep}{7pt} % Séparation de la marge
+\setlength{\topmargin}{0pt} % Pas de marge en haut
+\setlength{\headheight}{13pt} % Haut de page
+\setlength{\headsep}{10pt} % Entre le haut de page et le texte
+\setlength{\footskip}{27pt} % Bas de page + séparation
+\setlength{\textheight}{668pt} % Hauteur de la zone de texte (25cm)
+
+\begin{document}
+\begin{center}
+\renewcommand{\arraystretch}{1.4} 
+ \begin{tabular}{lrrrr}
+	\hline
+ & \multicolumn{2}{c}{\textbf{cplex}} & \multicolumn{2}{c}{\textbf{heuristique}}\\
+\textbf{Instance}  & \textbf{Temps (s)} & \textbf{Optimal ?}  & \textbf{Temps (s)} & \textbf{Optimal ?} \\\hline
+
+instance\_t3\_1.txt & 0.03 & 
+$\times$
+ & 0.0 & 
+$\times$
+\\
+instance\_t5\_1.txt & 0.11 & 
+$\times$
+ & 16.8 & 
+\\
+instance\_t5\_10.txt & 0.11 & 
+$\times$
+ & 15.47 & 
+\\
+instance\_t5\_2.txt & 0.09 & 
+$\times$
+ & 17.65 & 
+\\
+instance\_t5\_3.txt & 0.08 & 
+$\times$
+ & 18.24 & 
+\\
+instance\_t5\_4.txt & 0.1 & 
+$\times$
+ & 16.36 & 
+\\
+instance\_t5\_5.txt & 0.08 & 
+$\times$
+ & 14.97 & 
+\\
+instance\_t5\_6.txt & 0.07 & 
+$\times$
+ & 10.77 & 
+\\
+instance\_t5\_7.txt & 0.06 & 
+$\times$
+ & 13.99 & 
+\\
+instance\_t5\_8.txt & 0.09 & 
+$\times$
+ & 5.24 & 
+$\times$
+\\
+instance\_t5\_9.txt & 0.08 & 
+$\times$
+ & 0.0 & 
+$\times$
+\\
+instance\_t6\_1.txt & 0.19 & 
+$\times$
+ & 16.04 & 
+\\
+instance\_t6\_10.txt & 0.16 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_2.txt & 0.26 & 
+$\times$
+ & 12.7 & 
+\\
+instance\_t6\_3.txt & 0.17 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t6\_4.txt & 0.2 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_5.txt & 0.83 & 
+$\times$
+ & 12.36 & 
+\\
+instance\_t6\_6.txt & 0.18 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_7.txt & 0.28 & 
+$\times$
+ & 21.3 & 
+\\
+instance\_t6\_8.txt & 0.17 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_9.txt & 0.24 & 
+$\times$
+ & 11.07 & 
+\\
+instance\_t7\_1.txt & 1.14 & 
+$\times$
+ & 10.02 & 
+\\
+instance\_t7\_10.txt & 0.62 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_2.txt & 1.26 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t7\_3.txt & 4.08 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t7\_4.txt & 0.42 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t7\_5.txt & 0.53 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_6.txt & 0.8 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_7.txt & 1.92 & 
+$\times$
+ & 18.33 & 
+\\
+\hline\end{tabular}
+\end{center}
+
+\newpage
+\begin{center}
+\renewcommand{\arraystretch}{1.4} 
+ \begin{tabular}{lrrrr}
+	\hline
+ & \multicolumn{2}{c}{\textbf{cplex}} & \multicolumn{2}{c}{\textbf{heuristique}}\\
+\textbf{Instance}  & \textbf{Temps (s)} & \textbf{Optimal ?}  & \textbf{Temps (s)} & \textbf{Optimal ?} \\\hline
+
+instance\_t7\_8.txt & 0.94 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_9.txt & 0.6 & 
+$\times$
+ & 10.01 & 
+\\
+<<<<<<< Updated upstream
+instance\_t8\_1.txt & 59.01 & 
+$\times$
+ & 14.32 & 
+\\
+instance\_t8\_10.txt & 20.68 & 
+$\times$
+ & 18.76 & 
+\\
+instance\_t8\_2.txt & 24.25 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_3.txt & 103.69 & 
+$\times$
+ & 24.73 & 
+\\
+instance\_t8\_4.txt & 21.28 & 
+$\times$
+ & 17.09 & 
+\\
+instance\_t8\_5.txt & 3.88 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t8\_6.txt & 67.91 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_7.txt & 2.63 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t8\_8.txt & 9.38 & 
+$\times$
+ & 28.45 & 
+\\
+instance\_t8\_9.txt & 3.58 & 
+$\times$
+ & 26.28 & 
+\\
+
+=======
+instance\_t8\_1.txt & 2.18 & 
+$\times$
+ & 13.39 & 
+\\
+instance\_t8\_10.txt & 82.88 & 
+$\times$
+ & 82.88 & 
+$\times$
+\\
+instance\_t8\_2.txt & 98.07 & 
+$\times$
+ & 31.83 & 
+\\
+instance\_t8\_3.txt & 150.55 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_4.txt & 8.89 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_5.txt & 39.01 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_6.txt & 78.3 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_7.txt & 3.39 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_8.txt & 4.48 & 
+$\times$
+ & 23.13 & 
+\\
+instance\_t8\_9.txt & 27.62 & 
+$\times$
+ & 20.64 & 
+\\
+instance\_t3\_1.txt & 0.03 & 
+$\times$
+ & 0.0 & 
+$\times$
+\\
+instance\_t5\_1.txt & 0.11 & 
+$\times$
+ & 16.8 & 
+\\
+instance\_t5\_10.txt & 0.11 & 
+$\times$
+ & 15.47 & 
+\\
+instance\_t5\_2.txt & 0.09 & 
+$\times$
+ & 17.65 & 
+\\
+instance\_t5\_3.txt & 0.08 & 
+$\times$
+ & 18.24 & 
+\\
+instance\_t5\_4.txt & 0.1 & 
+$\times$
+ & 16.36 & 
+\\
+instance\_t5\_5.txt & 0.08 & 
+$\times$
+ & 14.97 & 
+\\
+instance\_t5\_6.txt & 0.07 & 
+$\times$
+ & 10.77 & 
+\\
+instance\_t5\_7.txt & 0.06 & 
+$\times$
+ & 13.99 & 
+\\
+instance\_t5\_8.txt & 0.09 & 
+$\times$
+ & 5.24 & 
+$\times$
+\\
+instance\_t5\_9.txt & 0.08 & 
+$\times$
+ & 0.0 & 
+$\times$
+\\
+instance\_t6\_1.txt & 0.19 & 
+$\times$
+ & 16.04 & 
+\\
+instance\_t6\_10.txt & 0.16 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_2.txt & 0.26 & 
+$\times$
+ & 12.7 & 
+\\
+instance\_t6\_3.txt & 0.17 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t6\_4.txt & 0.2 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_5.txt & 0.83 & 
+$\times$
+ & 12.36 & 
+\\
+instance\_t6\_6.txt & 0.18 & 
+$\times$
+ & 10.0 & 
+\\
+\hline\end{tabular}
+\end{center}
+
+\newpage
+\begin{center}
+\renewcommand{\arraystretch}{1.4} 
+ \begin{tabular}{lrrrr}
+	\hline
+ & \multicolumn{2}{c}{\textbf{cplex}} & \multicolumn{2}{c}{\textbf{heuristique}}\\
+\textbf{Instance}  & \textbf{Temps (s)} & \textbf{Optimal ?}  & \textbf{Temps (s)} & \textbf{Optimal ?} \\\hline
+
+instance\_t6\_7.txt & 0.28 & 
+$\times$
+ & 21.3 & 
+\\
+instance\_t6\_8.txt & 0.17 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t6\_9.txt & 0.24 & 
+$\times$
+ & 11.07 & 
+\\
+instance\_t7\_1.txt & 1.14 & 
+$\times$
+ & 10.02 & 
+\\
+instance\_t7\_10.txt & 0.62 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_2.txt & 1.26 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t7\_3.txt & 4.08 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t7\_4.txt & 0.42 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t7\_5.txt & 0.53 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_6.txt & 0.8 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_7.txt & 1.92 & 
+$\times$
+ & 18.33 & 
+\\
+instance\_t7\_8.txt & 0.94 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t7\_9.txt & 0.6 & 
+$\times$
+ & 10.01 & 
+\\
+instance\_t8\_1.txt & 2.18 & 
+$\times$
+ & 13.39 & 
+\\
+instance\_t8\_10.txt & 82.88 & 
+$\times$
+ & 82.88 & 
+$\times$
+\\
+instance\_t8\_2.txt & 98.07 & 
+$\times$
+ & 31.83 & 
+\\
+instance\_t8\_3.txt & 150.55 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_4.txt & 8.89 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_5.txt & 39.01 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_6.txt & 78.3 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_7.txt & 3.39 & 
+$\times$
+ & 10.0 & 
+\\
+instance\_t8\_8.txt & 4.48 & 
+$\times$
+ & 23.13 & 
+\\
+instance\_t8\_9.txt & 27.62 & 
+$\times$
+ & 20.64 & 
+\\
+\hline\end{tabular}
+\end{center}
+>>>>>>> Stashed changes
+
+
+\end{document}
