@@ -4,7 +4,12 @@
 # include("src/resolution.jl")
 
 # This file contains methods to solve an instance (heuristically or with CPLEX)
-using CPLEX
+import Pkg
+Pkg.add(["JuMP", "Cbc", "Plots", "GR"])  # Installe JuMP et CBC
+
+using JuMP
+using Cbc  
+using Plots
 
 include("heuristique.jl")
 
@@ -22,7 +27,7 @@ function cplexSolve(x)
 	
 	start = time()
 	
-	singles = Model(CPLEX.Optimizer)
+	singles = Model(Cbc.Optimizer)
 	
 	@variable(singles,y[1:n,1:n],Bin)	# == 1 ssi (i,j) blanche
 	@objective(singles,Max,y[1,1])
@@ -190,5 +195,5 @@ end
 
 
 # solveDataSet()
-# performanceDiagram("C:/Users/Yoga/Documents/2A/info/towers/Projet_RO203/Singles/diagramme.png")
-# resultsArray("C:/Users/Yoga/Documents/2A/info/towers/Projet_RO203/Singles/results.tex")
+performanceDiagram("graph.png")
+# resultsArray("../results.tex")

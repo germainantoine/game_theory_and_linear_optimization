@@ -1,4 +1,6 @@
 # This file contains functions related to reading, writing and displaying a grid and experimental results
+import Pkg
+Pkg.add(["JuMP", "Cbc", "Plots", "GR"]) 
 
 using JuMP
 using Plots
@@ -532,4 +534,3 @@ function resultsArray(outputFile::String)
     close(fout)
     
 end 
-

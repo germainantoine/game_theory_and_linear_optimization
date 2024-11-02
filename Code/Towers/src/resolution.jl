@@ -2,7 +2,13 @@
 # cd("D:/M1/RO203/Projet_RO203/Towers") Chemin à modifier
 # include("src/resolution.jl")
 # This file contains methods to solve an instance (heuristically or with CPLEX)
-using CPLEX
+
+import Pkg
+Pkg.add(["JuMP", "Cbc", "Plots", "GR"])  # Installe JuMP et CBC
+
+using JuMP
+using Cbc  
+using Plots
 
 include("generation.jl")
 
@@ -14,7 +20,7 @@ Solve an instance with CPLEX
 function cplexSolve(nord,sud,ouest,est)
 	n = size(nord,1)
     # Create the model
-    m = Model(CPLEX.Optimizer)
+    m = Model(Cbc.Optimizer)
 
 	@variable(m,x[1:n,1:n,1:n],Bin) # ==1 ssi (i,j) contient k
 	@variable(m,yn[1:n,1:n],Bin)	# ==1 ssi (i,j) visible depuis le nord
@@ -64,7 +70,7 @@ function cplexSolve(nord,sud,ouest,est)
     # Return:
     # 1 - true if an optimum is found
     # 2 - the resolution time
-    return x,JuMP.primal_status(m) == JuMP.MathOptInterface.FEASIBLE_POINT, time() - start
+    return x,JuMP.primal_status(m) == JuMP.MOI.FEASIBLE_POINT, time() - start
     
 end
 
@@ -537,8 +543,10 @@ function solveDataSet()
     end 
 end
 
-generateDataSet()
-solveDataSet()
+# generateDataSet()
+# solveDataSet()
+performanceDiagram("graph")
+#resultsArray("array.tex")
 
 # nord,sud,ouest,est = generateInstance(3)
 # saveInstance(nord,sud,ouest,est,"instance_t3_1.txt")
