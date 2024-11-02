@@ -1,7 +1,7 @@
 This project consists of the comparison of MILP and heuristic solving of two games, Towers and Singles.
 To see all results, please read the .pdf provided with this folder.
 
-To run the project, follow the following instructions: (if you do not have julia or tex downloaded on your computer, see below)
+To run the project, follow the following instructions: (if you do not have julia downloaded on your computer, see below)
  - open a cmd terminal and join the folder of your choice using the cd command
  - copy this command: 
 '''
